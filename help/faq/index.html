@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FAQ（よくある質問） | 住所チェック＆整形</title>
+    <meta name="description" content="住所チェック＆整形のよくある質問と回答。" />
+    <style>
+      :root {
+        --fg: #1a1a1a;
+        --muted: #5c5f62;
+        --bg: #ffffff;
+        --line: #e3e3e3;
+        --accent: #0a6b4f;
+        --soft: #f4f6f8;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans",
+          "Hiragino Kaku Gothic ProN", "Noto Sans JP", Meiryo, sans-serif;
+        color: var(--fg);
+        background: var(--bg);
+        line-height: 1.75;
+      }
+      header {
+        border-bottom: 1px solid var(--line);
+        background: var(--soft);
+      }
+      .wrap {
+        max-width: 880px;
+        margin: 0 auto;
+        padding: 0 16px;
+      }
+      header .wrap {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 8px 20px;
+        padding: 14px 16px;
+      }
+      header a.brand {
+        font-weight: 700;
+        color: var(--fg);
+        text-decoration: none;
+        font-size: 17px;
+      }
+      header nav a {
+        color: var(--muted);
+        text-decoration: none;
+        margin-right: 14px;
+        font-size: 14px;
+      }
+      header nav a:hover,
+      main a:hover {
+        text-decoration: underline;
+      }
+      main {
+        padding: 28px 0 56px;
+      }
+      main a {
+        color: var(--accent);
+      }
+      h1 {
+        font-size: 26px;
+        margin: 0 0 16px;
+        line-height: 1.35;
+      }
+      h2 {
+        font-size: 20px;
+        margin: 36px 0 10px;
+        padding-top: 8px;
+        border-top: 1px solid var(--line);
+      }
+      h3 {
+        font-size: 16px;
+        margin: 24px 0 6px;
+      }
+      p,
+      li {
+        font-size: 15.5px;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        margin: 12px 0 20px;
+        font-size: 14px;
+        display: block;
+        overflow-x: auto;
+      }
+      th,
+      td {
+        border: 1px solid var(--line);
+        padding: 6px 10px;
+        text-align: left;
+        vertical-align: top;
+      }
+      th {
+        background: var(--soft);
+        white-space: nowrap;
+      }
+      code {
+        background: var(--soft);
+        padding: 1px 5px;
+        border-radius: 3px;
+        font-size: 90%;
+      }
+      pre {
+        background: var(--soft);
+        padding: 12px;
+        overflow-x: auto;
+        border-radius: 6px;
+      }
+      blockquote {
+        margin: 12px 0;
+        padding: 8px 14px;
+        border-left: 4px solid var(--accent);
+        background: var(--soft);
+      }
+      .subnav {
+        background: var(--soft);
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        padding: 10px 14px;
+        margin: 0 0 20px;
+        font-size: 14px;
+      }
+      .subnav a {
+        margin-right: 12px;
+        white-space: nowrap;
+      }
+      .updated {
+        color: var(--muted);
+        font-size: 13px;
+      }
+      footer {
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 13px;
+        padding: 18px 0 32px;
+      }
+      footer a {
+        color: var(--muted);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="wrap">
+        <a class="brand" href="/addressworks-site/">住所チェック＆整形</a>
+        <nav>
+          <a href="/addressworks-site/help/">ヘルプ</a>
+          <a href="/addressworks-site/help/faq/">FAQ</a>
+          <a href="/addressworks-site/changelog/">更新履歴</a>
+          <a href="/addressworks-site/privacy/">プライバシーポリシー</a>
+          <a href="/addressworks-site/terms/">利用規約</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="wrap"><div class="subnav"><a href="/addressworks-site/help/">はじめかた</a> <a href="/addressworks-site/help/postal/">郵便番号・住所</a> <a href="/addressworks-site/help/text/">文字・文字数</a> <a href="/addressworks-site/help/messages/">エラー文</a> <a href="/addressworks-site/help/advanced/">詳細設定</a> <a href="/addressworks-site/help/plans/">プラン</a> <strong>FAQ</strong></div> <h1>FAQ（よくある質問）</h1>
+<h2>導入</h2>
+<p><strong>Q. Shopify Plus でなくても使えますか？</strong>
+はい。Basic・Shopify・Advanced・Plus のすべてで全機能が動きます。Plus 限定の API は使っていません。</p>
+<p><strong>Q. テーマの編集は必要ですか？</strong>
+いいえ。チェックアウトの検証は Shopify Functions で動くため、テーマやチェックアウトのカスタマイズは不要です。</p>
+<p><strong>Q. インストールしたのにエラーが出ません。</strong>
+次を順に確認してください。</p>
+<ol>
+<li>管理画面ホームの「状態」が「有効」になっているか。</li>
+<li>Shopify の 設定 &gt; チェックアウト の「チェックアウトルール」に本アプリのルールが 8 件あり、すべて有効か。足りない場合はホームの「登録を再実行」。</li>
+<li>配送先の国が「日本」か。日本以外は検証しません。</li>
+<li>今月の検証件数が上限に達していないか（<a href="/addressworks-site/help/plans/">プラン</a>）。</li>
+<li>住所の全欄が英数字だけ（海外購入者とみなしてスキップ）になっていないか。</li>
+</ol>
+<h2>検証</h2>
+<p><strong>Q. 正しい住所なのに「存在しない郵便番号」と出ます。</strong>
+日本郵便のデータは月 1 回更新されるため、新設された郵便番号は反映まで最長 1 か月かかります。該当の郵便番号をサポートにお知らせください。それまでは「存在しない郵便番号の検出」を一時的にオフにできます。</p>
+<p><strong>Q. 「髙」などの旧字体は本当にエラーにする必要がありますか？</strong>
+お使いの送り状ソフトが印字できるなら不要です。「環境依存文字・JIS 外漢字の検出」をオフにしてください。ヤマト B2 クラウド・佐川 e飛伝Ⅲ・ゆうプリ R では文字化けや「?」になる例が報告されています。</p>
+<p><strong>Q. エラーが出ているのに注文が入りました。</strong>
+購入者がエクスプレス決済（Shop Pay など）で既存の住所を使った場合も検証は行われます。注文が入った場合は、検証の一時停止（上限到達）か、ルールの無効化が考えられます。管理画面の「状態」を確認してください。</p>
+<p><strong>Q. 海外からの注文も検証されますか？</strong>
+配送先の国が日本以外の場合は検証しません。日本宛てで住所がローマ字だけの場合は、初期設定ではスキップします（<a href="/addressworks-site/help/advanced/">詳細設定</a>）。</p>
+<p><strong>Q. 検証に時間がかかって、チェックアウトが遅くなりませんか？</strong>
+検証は Shopify の中で 1 ミリ秒未満〜数ミリ秒で完了します。外部サーバーへの通信はありません。</p>
+<h2>データ・安全</h2>
+<p><strong>Q. 購入者の住所はどこかに送られますか？</strong>
+いいえ。検証は Shopify の中で完結し、当方のサーバーには購入者の情報は届きません。詳しくは <a href="/addressworks-site/privacy/">プライバシーポリシー</a>。</p>
+<p><strong>Q. 管理画面のサーバーが止まったらチェックアウトはどうなりますか？</strong>
+検証は止まりません。設定は Shopify 側（メタフィールド）に保存されており、検証関数はそれを直接読みます。</p>
+<h2>料金</h2>
+<p><strong>Q. 無料プランで足りるか分かりません。</strong>
+月の注文件数が 100 件以内なら無料プランで十分です。上限に近づくとお知らせしますので、そのときに Standard へ変更してください。</p>
+<p><strong>Q. 解約はどうすればいいですか？</strong>
+アプリをアンインストールすると課金は止まります。無料プランに戻すだけなら管理画面「プラン」から変更できます。</p>
+<h2>その他</h2>
+<p><strong>Q. 住所の自動整形（注文後に住所を直す機能）はありますか？</strong>
+次のバージョン（v1.1）で提供予定です。<a href="/addressworks-site/changelog/">更新履歴</a> でお知らせします。</p>
+<p><strong>Q. 問い合わせ先は？</strong>
+<a href="mailto:m.0917youki@gmail.com">m.0917youki@gmail.com</a>（日本語、通常 2 営業日以内）。ストアのドメインと再現手順を添えていただくと早く対応できます。</p>
+</div>
+    </main>
+    <footer>
+      <div class="wrap">
+        アドレスワークス（住所チェック＆整形）｜ お問い合わせ:
+        <a href="mailto:m.0917youki@gmail.com">m.0917youki@gmail.com</a> ｜
+        <a href="/addressworks-site/privacy/">プライバシーポリシー</a> ｜
+        <a href="/addressworks-site/terms/">利用規約</a> <br />最終更新: 2026-10-30
+      </div>
+    </footer>
+  </body>
+</html>

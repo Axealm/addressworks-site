@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ヘルプ: プランと上限 | 住所チェック＆整形</title>
+    <meta name="description" content="Free・Standard・Pro の違い、検証件数の数え方、上限に達したときの挙動、プラン変更と解約。" />
+    <style>
+      :root {
+        --fg: #1a1a1a;
+        --muted: #5c5f62;
+        --bg: #ffffff;
+        --line: #e3e3e3;
+        --accent: #0a6b4f;
+        --soft: #f4f6f8;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans",
+          "Hiragino Kaku Gothic ProN", "Noto Sans JP", Meiryo, sans-serif;
+        color: var(--fg);
+        background: var(--bg);
+        line-height: 1.75;
+      }
+      header {
+        border-bottom: 1px solid var(--line);
+        background: var(--soft);
+      }
+      .wrap {
+        max-width: 880px;
+        margin: 0 auto;
+        padding: 0 16px;
+      }
+      header .wrap {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 8px 20px;
+        padding: 14px 16px;
+      }
+      header a.brand {
+        font-weight: 700;
+        color: var(--fg);
+        text-decoration: none;
+        font-size: 17px;
+      }
+      header nav a {
+        color: var(--muted);
+        text-decoration: none;
+        margin-right: 14px;
+        font-size: 14px;
+      }
+      header nav a:hover,
+      main a:hover {
+        text-decoration: underline;
+      }
+      main {
+        padding: 28px 0 56px;
+      }
+      main a {
+        color: var(--accent);
+      }
+      h1 {
+        font-size: 26px;
+        margin: 0 0 16px;
+        line-height: 1.35;
+      }
+      h2 {
+        font-size: 20px;
+        margin: 36px 0 10px;
+        padding-top: 8px;
+        border-top: 1px solid var(--line);
+      }
+      h3 {
+        font-size: 16px;
+        margin: 24px 0 6px;
+      }
+      p,
+      li {
+        font-size: 15.5px;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        margin: 12px 0 20px;
+        font-size: 14px;
+        display: block;
+        overflow-x: auto;
+      }
+      th,
+      td {
+        border: 1px solid var(--line);
+        padding: 6px 10px;
+        text-align: left;
+        vertical-align: top;
+      }
+      th {
+        background: var(--soft);
+        white-space: nowrap;
+      }
+      code {
+        background: var(--soft);
+        padding: 1px 5px;
+        border-radius: 3px;
+        font-size: 90%;
+      }
+      pre {
+        background: var(--soft);
+        padding: 12px;
+        overflow-x: auto;
+        border-radius: 6px;
+      }
+      blockquote {
+        margin: 12px 0;
+        padding: 8px 14px;
+        border-left: 4px solid var(--accent);
+        background: var(--soft);
+      }
+      .subnav {
+        background: var(--soft);
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        padding: 10px 14px;
+        margin: 0 0 20px;
+        font-size: 14px;
+      }
+      .subnav a {
+        margin-right: 12px;
+        white-space: nowrap;
+      }
+      .updated {
+        color: var(--muted);
+        font-size: 13px;
+      }
+      footer {
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 13px;
+        padding: 18px 0 32px;
+      }
+      footer a {
+        color: var(--muted);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="wrap">
+        <a class="brand" href="/addressworks-site/">住所チェック＆整形</a>
+        <nav>
+          <a href="/addressworks-site/help/">ヘルプ</a>
+          <a href="/addressworks-site/help/faq/">FAQ</a>
+          <a href="/addressworks-site/changelog/">更新履歴</a>
+          <a href="/addressworks-site/privacy/">プライバシーポリシー</a>
+          <a href="/addressworks-site/terms/">利用規約</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="wrap"><div class="subnav"><a href="/addressworks-site/help/">はじめかた</a> <a href="/addressworks-site/help/postal/">郵便番号・住所</a> <a href="/addressworks-site/help/text/">文字・文字数</a> <a href="/addressworks-site/help/messages/">エラー文</a> <a href="/addressworks-site/help/advanced/">詳細設定</a> <strong>プラン</strong> <a href="/addressworks-site/help/faq/">FAQ</a></div> <h1>プランと上限</h1>
+<table>
+<thead>
+<tr>
+<th>プラン</th>
+<th>月額（米ドル）</th>
+<th>月間の検証件数</th>
+<th>無料トライアル</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Free</td>
+<td>$0</td>
+<td>100 件</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Standard</td>
+<td>$6.99</td>
+<td>1,000 件</td>
+<td>7 日</td>
+</tr>
+<tr>
+<td>Pro</td>
+<td>$19.99</td>
+<td>無制限</td>
+<td>7 日</td>
+</tr>
+</tbody></table>
+<p>すべてのプランで全機能が使えます。違いは月間の検証件数だけです。</p>
+<h2>検証件数の数え方</h2>
+<p><strong>注文 1 件 = 1 件</strong>です。購入者が入力を何度直しても、注文が作成された時点で 1 件と数えます。エラーが出なかった注文も数えます。月の初め（日本時間の 1 日 0 時）にリセットされます。</p>
+<h2>上限に達したとき</h2>
+<ul>
+<li>上限の 80% に達した時点で、管理画面とメールでお知らせします。</li>
+<li>上限に達すると、その月の残りは検証を<strong>一時停止</strong>します。チェックアウト自体は通常どおり進みます（購入者が困ることはありません）。</li>
+<li>上位プランに変更すると、すぐに再開します。翌月 1 日にも自動で再開します。</li>
+</ul>
+<h2>プランの変更</h2>
+<p>管理画面「プラン」から選びます。Shopify の承認画面で「承認」を押すと切り替わります。請求は Shopify の請求書にまとめられます。</p>
+<ul>
+<li>上位への変更: 即時。トライアルは初回の有料プラン契約時のみ。</li>
+<li>下位への変更・無料プランへの変更: 即時。日割り返金はありません。</li>
+<li>アンインストール: 課金は停止し、当方が保存している店舗データは削除されます。再インストール後は初期設定から始まります。</li>
+</ul>
+<h2>開発ストア</h2>
+<p>開発ストアでは無料でお試しいただけます（Shopify の規約に従います）。</p>
+</div>
+    </main>
+    <footer>
+      <div class="wrap">
+        アドレスワークス（住所チェック＆整形）｜ お問い合わせ:
+        <a href="mailto:m.0917youki@gmail.com">m.0917youki@gmail.com</a> ｜
+        <a href="/addressworks-site/privacy/">プライバシーポリシー</a> ｜
+        <a href="/addressworks-site/terms/">利用規約</a> <br />最終更新: 2026-10-30
+      </div>
+    </footer>
+  </body>
+</html>

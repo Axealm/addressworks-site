@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>更新履歴 | 住所チェック＆整形</title>
+    <meta name="description" content="住所チェック＆整形のバージョンごとの変更点と郵便番号データの更新日。" />
+    <style>
+      :root {
+        --fg: #1a1a1a;
+        --muted: #5c5f62;
+        --bg: #ffffff;
+        --line: #e3e3e3;
+        --accent: #0a6b4f;
+        --soft: #f4f6f8;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans",
+          "Hiragino Kaku Gothic ProN", "Noto Sans JP", Meiryo, sans-serif;
+        color: var(--fg);
+        background: var(--bg);
+        line-height: 1.75;
+      }
+      header {
+        border-bottom: 1px solid var(--line);
+        background: var(--soft);
+      }
+      .wrap {
+        max-width: 880px;
+        margin: 0 auto;
+        padding: 0 16px;
+      }
+      header .wrap {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 8px 20px;
+        padding: 14px 16px;
+      }
+      header a.brand {
+        font-weight: 700;
+        color: var(--fg);
+        text-decoration: none;
+        font-size: 17px;
+      }
+      header nav a {
+        color: var(--muted);
+        text-decoration: none;
+        margin-right: 14px;
+        font-size: 14px;
+      }
+      header nav a:hover,
+      main a:hover {
+        text-decoration: underline;
+      }
+      main {
+        padding: 28px 0 56px;
+      }
+      main a {
+        color: var(--accent);
+      }
+      h1 {
+        font-size: 26px;
+        margin: 0 0 16px;
+        line-height: 1.35;
+      }
+      h2 {
+        font-size: 20px;
+        margin: 36px 0 10px;
+        padding-top: 8px;
+        border-top: 1px solid var(--line);
+      }
+      h3 {
+        font-size: 16px;
+        margin: 24px 0 6px;
+      }
+      p,
+      li {
+        font-size: 15.5px;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        margin: 12px 0 20px;
+        font-size: 14px;
+        display: block;
+        overflow-x: auto;
+      }
+      th,
+      td {
+        border: 1px solid var(--line);
+        padding: 6px 10px;
+        text-align: left;
+        vertical-align: top;
+      }
+      th {
+        background: var(--soft);
+        white-space: nowrap;
+      }
+      code {
+        background: var(--soft);
+        padding: 1px 5px;
+        border-radius: 3px;
+        font-size: 90%;
+      }
+      pre {
+        background: var(--soft);
+        padding: 12px;
+        overflow-x: auto;
+        border-radius: 6px;
+      }
+      blockquote {
+        margin: 12px 0;
+        padding: 8px 14px;
+        border-left: 4px solid var(--accent);
+        background: var(--soft);
+      }
+      .subnav {
+        background: var(--soft);
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        padding: 10px 14px;
+        margin: 0 0 20px;
+        font-size: 14px;
+      }
+      .subnav a {
+        margin-right: 12px;
+        white-space: nowrap;
+      }
+      .updated {
+        color: var(--muted);
+        font-size: 13px;
+      }
+      footer {
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 13px;
+        padding: 18px 0 32px;
+      }
+      footer a {
+        color: var(--muted);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="wrap">
+        <a class="brand" href="/addressworks-site/">住所チェック＆整形</a>
+        <nav>
+          <a href="/addressworks-site/help/">ヘルプ</a>
+          <a href="/addressworks-site/help/faq/">FAQ</a>
+          <a href="/addressworks-site/changelog/">更新履歴</a>
+          <a href="/addressworks-site/privacy/">プライバシーポリシー</a>
+          <a href="/addressworks-site/terms/">利用規約</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="wrap"> <h1>更新履歴</h1>
+<h2>v1.0.0 — 2026-10-30</h2>
+<p>初回リリース。</p>
+<ul>
+<li>郵便番号と住所の照合、存在しない郵便番号、番地抜け、町名なし、表記ゆれの検出</li>
+<li>文字数上限（ヤマト B2 クラウド／佐川 e飛伝Ⅲ／ゆうプリ R／Ship&amp;co のプリセット）、環境依存文字、全角数字・記号、英語入力、住所と建物名の連結、禁止フレーズの検出</li>
+<li>エラー文の変更（日本語・英語）</li>
+<li>請求先住所の検証、海外購入者・デジタル商品のスキップ、設定のエクスポート／インポート</li>
+<li>Free／Standard／Pro プラン</li>
+</ul>
+<h2>郵便番号データ</h2>
+<table>
+<thead>
+<tr>
+<th>取り込み日</th>
+<th>日本郵便データ</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>2026-10-30</td>
+<td>住所の郵便番号（utf_ken_all）、事業所の個別郵便番号（jigyosyo）</td>
+</tr>
+</tbody></table>
+<h2>予定</h2>
+<ul>
+<li>v1.1: 注文後の住所自動整形（送り状ソフト向けの整形、修正案の提示）</li>
+</ul>
+</div>
+    </main>
+    <footer>
+      <div class="wrap">
+        アドレスワークス（住所チェック＆整形）｜ お問い合わせ:
+        <a href="mailto:m.0917youki@gmail.com">m.0917youki@gmail.com</a> ｜
+        <a href="/addressworks-site/privacy/">プライバシーポリシー</a> ｜
+        <a href="/addressworks-site/terms/">利用規約</a> <br />最終更新: 2026-10-30
+      </div>
+    </footer>
+  </body>
+</html>

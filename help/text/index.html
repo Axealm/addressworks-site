@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ヘルプ: 文字・文字数の検証 | 住所チェック＆整形</title>
+    <meta name="description" content="送り状ソフトのプリセット、欄ごとの文字数上限、環境依存文字、全角数字、英語入力、建物名の連結、禁止フレーズの設定。" />
+    <style>
+      :root {
+        --fg: #1a1a1a;
+        --muted: #5c5f62;
+        --bg: #ffffff;
+        --line: #e3e3e3;
+        --accent: #0a6b4f;
+        --soft: #f4f6f8;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans",
+          "Hiragino Kaku Gothic ProN", "Noto Sans JP", Meiryo, sans-serif;
+        color: var(--fg);
+        background: var(--bg);
+        line-height: 1.75;
+      }
+      header {
+        border-bottom: 1px solid var(--line);
+        background: var(--soft);
+      }
+      .wrap {
+        max-width: 880px;
+        margin: 0 auto;
+        padding: 0 16px;
+      }
+      header .wrap {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 8px 20px;
+        padding: 14px 16px;
+      }
+      header a.brand {
+        font-weight: 700;
+        color: var(--fg);
+        text-decoration: none;
+        font-size: 17px;
+      }
+      header nav a {
+        color: var(--muted);
+        text-decoration: none;
+        margin-right: 14px;
+        font-size: 14px;
+      }
+      header nav a:hover,
+      main a:hover {
+        text-decoration: underline;
+      }
+      main {
+        padding: 28px 0 56px;
+      }
+      main a {
+        color: var(--accent);
+      }
+      h1 {
+        font-size: 26px;
+        margin: 0 0 16px;
+        line-height: 1.35;
+      }
+      h2 {
+        font-size: 20px;
+        margin: 36px 0 10px;
+        padding-top: 8px;
+        border-top: 1px solid var(--line);
+      }
+      h3 {
+        font-size: 16px;
+        margin: 24px 0 6px;
+      }
+      p,
+      li {
+        font-size: 15.5px;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        margin: 12px 0 20px;
+        font-size: 14px;
+        display: block;
+        overflow-x: auto;
+      }
+      th,
+      td {
+        border: 1px solid var(--line);
+        padding: 6px 10px;
+        text-align: left;
+        vertical-align: top;
+      }
+      th {
+        background: var(--soft);
+        white-space: nowrap;
+      }
+      code {
+        background: var(--soft);
+        padding: 1px 5px;
+        border-radius: 3px;
+        font-size: 90%;
+      }
+      pre {
+        background: var(--soft);
+        padding: 12px;
+        overflow-x: auto;
+        border-radius: 6px;
+      }
+      blockquote {
+        margin: 12px 0;
+        padding: 8px 14px;
+        border-left: 4px solid var(--accent);
+        background: var(--soft);
+      }
+      .subnav {
+        background: var(--soft);
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        padding: 10px 14px;
+        margin: 0 0 20px;
+        font-size: 14px;
+      }
+      .subnav a {
+        margin-right: 12px;
+        white-space: nowrap;
+      }
+      .updated {
+        color: var(--muted);
+        font-size: 13px;
+      }
+      footer {
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 13px;
+        padding: 18px 0 32px;
+      }
+      footer a {
+        color: var(--muted);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="wrap">
+        <a class="brand" href="/addressworks-site/">住所チェック＆整形</a>
+        <nav>
+          <a href="/addressworks-site/help/">ヘルプ</a>
+          <a href="/addressworks-site/help/faq/">FAQ</a>
+          <a href="/addressworks-site/changelog/">更新履歴</a>
+          <a href="/addressworks-site/privacy/">プライバシーポリシー</a>
+          <a href="/addressworks-site/terms/">利用規約</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="wrap"><div class="subnav"><a href="/addressworks-site/help/">はじめかた</a> <a href="/addressworks-site/help/postal/">郵便番号・住所</a> <strong>文字・文字数</strong> <a href="/addressworks-site/help/messages/">エラー文</a> <a href="/addressworks-site/help/advanced/">詳細設定</a> <a href="/addressworks-site/help/plans/">プラン</a> <a href="/addressworks-site/help/faq/">FAQ</a></div> <h1>文字・文字数の検証</h1>
+<p>管理画面「文字・文字数」の各項目です。対象は配送先の 姓・名・会社名・市区町村・住所・建物名（部屋番号）です。</p>
+<h2>送り状ソフトのプリセット</h2>
+<p>お使いの送り状ソフトを選ぶと、欄ごとの文字数上限が一括で入ります。選んだ後に個別の欄を変えることもできます（その場合は「カスタム」になります）。</p>
+<table><thead><tr><th>プリセット</th><th>姓</th><th>名</th><th>会社名</th><th>市区町村</th><th>住所</th><th>建物名・部屋番号</th><th>全角数字を 2 文字</th><th>出典・備考</th></tr></thead><tbody><tr><td>ヤマト運輸 B2クラウド</td><td>8</td><td>8</td><td>25</td><td>12</td><td>16</td><td>16</td><td>いいえ</td><td><a href="https://support.shipandco.com/hc/en-us/articles/360015531294" rel="noopener" target="_blank" rel="noopener" target="_blank">出典</a>（暫定）<br><small>住所各行 全角16／半角32（Ship&amp;co サポート記事 2026-10-30 確認）。市区郡町村12はコミュニティ報告、氏名8・会社名25は暫定。</small></td></tr><tr><td>佐川急便 e飛伝Ⅲ</td><td>8</td><td>8</td><td>20</td><td>25</td><td>25</td><td>25</td><td>いいえ</td><td><a href="https://support.shipandco.com/hc/en-us/articles/360015531294" rel="noopener" target="_blank" rel="noopener" target="_blank">出典</a>（暫定）<br><small>住所各行 25 文字（全角半角問わず、Ship&amp;co サポート記事 2026-10-30 確認）。氏名・会社名は暫定。</small></td></tr><tr><td>日本郵便 ゆうプリR</td><td>10</td><td>10</td><td>20</td><td>25</td><td>25</td><td>25</td><td>いいえ</td><td><a href="https://support.shipandco.com/hc/en-us/articles/360015531294" rel="noopener" target="_blank" rel="noopener" target="_blank">出典</a>（暫定）<br><small>住所各行 25 文字（Ship&amp;co サポート記事 2026-10-30 確認。日本郵便の公式資料では住所計 150 バイトを自動分割）。氏名・会社名は暫定。</small></td></tr><tr><td>Ship&amp;co</td><td>8</td><td>8</td><td>25</td><td>16</td><td>16</td><td>16</td><td>いいえ</td><td><a href="https://www.shipandco.com/" rel="noopener" target="_blank" rel="noopener" target="_blank">出典</a>（暫定）<br><small>Ship&amp;co は運送会社ごとに上限が異なるため、最も厳しいヤマト（各行 全角16）に合わせる。</small></td></tr></tbody></table>
+
+<ul>
+<li>文字数は<strong>全角換算</strong>です。半角文字は 0.5 文字として数えます（例: 「1-2-3」は 2.5 → 切り上げて 3 文字）。</li>
+<li>「全角数字を 2 文字として数える」をオンにすると、全角数字 1 文字を全角 2 文字分として数えます。一部の送り状ソフトで全角数字が半角 2 文字分として扱われる場合に合わせる設定です。</li>
+<li>上限は 1〜200、空欄は制限なしです。「暫定」の付いた値は各社の公開仕様で確定できていないため、実際の送り状ソフトの仕様を優先してください（確認でき次第、更新履歴でお知らせします）。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>入力例（住所の上限 16）</th>
+<th>結果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>神宮前一丁目二番三号サンプルビルディング（20 文字）</td>
+<td>「住所は全角16文字以内で入力してください。長い場合は建物名欄に分けてください。」</td>
+</tr>
+</tbody></table>
+<h2>文字の種類</h2>
+<h3>環境依存文字・JIS 外漢字の検出（初期値: オン）</h3>
+<p>送り状ソフトや物流システムで印字できない文字（JIS X 0208 にない漢字・記号）をエラーにし、常用の代替字を案内します。半角カナは全角カナとして扱い、エラーにしません。</p>
+<table>
+<thead>
+<tr>
+<th>入力例</th>
+<th>結果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>姓: 髙橋</td>
+<td>「「髙」は送り状で印字できません。「高」でご入力ください。」</td>
+</tr>
+<tr>
+<td>姓: 𠮷田</td>
+<td>「「𠮷」は送り状で印字できません。「吉」でご入力ください。」</td>
+</tr>
+<tr>
+<td>①、㈱、℡</td>
+<td>「1」「(株)」「TEL」を案内</td>
+</tr>
+</tbody></table>
+<p>代替字の対応表（髙→高、﨑→崎、德→徳、瀨→瀬、濵→浜、栁→柳、鷗→鴎、靏→鶴 など 36 組）は組み込みです。対応表にない文字は「常用漢字」での入力を案内します。</p>
+<h3>全角数字・全角記号・全角英字の検出（初期値: オン）</h3>
+<p>「１−２−３」のような全角の数字・記号・英字をエラーにし、半角での入力を案内します。</p>
+<table>
+<thead>
+<tr>
+<th>入力例</th>
+<th>結果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>神宮前１−２−３</td>
+<td>「数字と記号は半角で入力してください（例: 1-2-3）。」</td>
+</tr>
+</tbody></table>
+<h3>英語（ローマ字）入力の検出（初期値: オン）</h3>
+<p>市区町村や住所にローマ字表記が混ざっている場合にエラーにします。住所の<strong>全欄が英数字だけ</strong>の場合は海外購入者とみなして検証全体をスキップします（<a href="/addressworks-site/help/advanced/">詳細設定</a> で変更できます）。</p>
+<table>
+<thead>
+<tr>
+<th>入力例</th>
+<th>結果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>市区町村: Shibuya-ku、住所: 神宮前1-2-3</td>
+<td>「市区町村は日本語で入力してください。」</td>
+</tr>
+<tr>
+<td>市区町村: Shibuya-ku、住所: 1-2-3 Jingumae、氏名: Taro Yamada</td>
+<td>スキップ（エラーなし）</td>
+</tr>
+</tbody></table>
+<h3>住所と建物名の連結の検出（初期値: オン）</h3>
+<p>住所欄の末尾が数字で、建物名欄の先頭も数字の場合（建物名が抜けて部屋番号だけ入力された場合）にエラーにします。</p>
+<table>
+<thead>
+<tr>
+<th>入力例</th>
+<th>結果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>住所: 神宮前1-2-3、建物名: 101</td>
+<td>「建物名・部屋番号の先頭は建物名から入力してください（例: ○○マンション101）。」</td>
+</tr>
+<tr>
+<td>住所: 神宮前1-2-3、建物名: サンプルマンション101</td>
+<td>通過</td>
+</tr>
+</tbody></table>
+<h2>禁止フレーズ（初期値: オフ）</h2>
+<p>指定したフレーズが含まれる場合にエラーにします。1 行に 1 つ、最大 50 件。全角・半角の違いは無視して照合します。</p>
+<table>
+<thead>
+<tr>
+<th>設定例</th>
+<th>入力例</th>
+<th>結果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>様方</td>
+<td>建物名: 山田様方</td>
+<td>「「様方」は入力できません。」</td>
+</tr>
+<tr>
+<td>営業所止め</td>
+<td>住所: 〇〇営業所止め</td>
+<td>「「営業所止め」は入力できません。」</td>
+</tr>
+</tbody></table>
+</div>
+    </main>
+    <footer>
+      <div class="wrap">
+        アドレスワークス（住所チェック＆整形）｜ お問い合わせ:
+        <a href="mailto:m.0917youki@gmail.com">m.0917youki@gmail.com</a> ｜
+        <a href="/addressworks-site/privacy/">プライバシーポリシー</a> ｜
+        <a href="/addressworks-site/terms/">利用規約</a> <br />最終更新: 2026-10-30
+      </div>
+    </footer>
+  </body>
+</html>

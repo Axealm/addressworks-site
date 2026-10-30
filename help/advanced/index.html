@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ヘルプ: 詳細設定 | 住所チェック＆整形</title>
+    <meta name="description" content="請求先住所の検証、海外購入者とデジタル商品のスキップ、設定のエクスポート／インポート。" />
+    <style>
+      :root {
+        --fg: #1a1a1a;
+        --muted: #5c5f62;
+        --bg: #ffffff;
+        --line: #e3e3e3;
+        --accent: #0a6b4f;
+        --soft: #f4f6f8;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans",
+          "Hiragino Kaku Gothic ProN", "Noto Sans JP", Meiryo, sans-serif;
+        color: var(--fg);
+        background: var(--bg);
+        line-height: 1.75;
+      }
+      header {
+        border-bottom: 1px solid var(--line);
+        background: var(--soft);
+      }
+      .wrap {
+        max-width: 880px;
+        margin: 0 auto;
+        padding: 0 16px;
+      }
+      header .wrap {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 8px 20px;
+        padding: 14px 16px;
+      }
+      header a.brand {
+        font-weight: 700;
+        color: var(--fg);
+        text-decoration: none;
+        font-size: 17px;
+      }
+      header nav a {
+        color: var(--muted);
+        text-decoration: none;
+        margin-right: 14px;
+        font-size: 14px;
+      }
+      header nav a:hover,
+      main a:hover {
+        text-decoration: underline;
+      }
+      main {
+        padding: 28px 0 56px;
+      }
+      main a {
+        color: var(--accent);
+      }
+      h1 {
+        font-size: 26px;
+        margin: 0 0 16px;
+        line-height: 1.35;
+      }
+      h2 {
+        font-size: 20px;
+        margin: 36px 0 10px;
+        padding-top: 8px;
+        border-top: 1px solid var(--line);
+      }
+      h3 {
+        font-size: 16px;
+        margin: 24px 0 6px;
+      }
+      p,
+      li {
+        font-size: 15.5px;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        margin: 12px 0 20px;
+        font-size: 14px;
+        display: block;
+        overflow-x: auto;
+      }
+      th,
+      td {
+        border: 1px solid var(--line);
+        padding: 6px 10px;
+        text-align: left;
+        vertical-align: top;
+      }
+      th {
+        background: var(--soft);
+        white-space: nowrap;
+      }
+      code {
+        background: var(--soft);
+        padding: 1px 5px;
+        border-radius: 3px;
+        font-size: 90%;
+      }
+      pre {
+        background: var(--soft);
+        padding: 12px;
+        overflow-x: auto;
+        border-radius: 6px;
+      }
+      blockquote {
+        margin: 12px 0;
+        padding: 8px 14px;
+        border-left: 4px solid var(--accent);
+        background: var(--soft);
+      }
+      .subnav {
+        background: var(--soft);
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        padding: 10px 14px;
+        margin: 0 0 20px;
+        font-size: 14px;
+      }
+      .subnav a {
+        margin-right: 12px;
+        white-space: nowrap;
+      }
+      .updated {
+        color: var(--muted);
+        font-size: 13px;
+      }
+      footer {
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 13px;
+        padding: 18px 0 32px;
+      }
+      footer a {
+        color: var(--muted);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="wrap">
+        <a class="brand" href="/addressworks-site/">住所チェック＆整形</a>
+        <nav>
+          <a href="/addressworks-site/help/">ヘルプ</a>
+          <a href="/addressworks-site/help/faq/">FAQ</a>
+          <a href="/addressworks-site/changelog/">更新履歴</a>
+          <a href="/addressworks-site/privacy/">プライバシーポリシー</a>
+          <a href="/addressworks-site/terms/">利用規約</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="wrap"><div class="subnav"><a href="/addressworks-site/help/">はじめかた</a> <a href="/addressworks-site/help/postal/">郵便番号・住所</a> <a href="/addressworks-site/help/text/">文字・文字数</a> <a href="/addressworks-site/help/messages/">エラー文</a> <strong>詳細設定</strong> <a href="/addressworks-site/help/plans/">プラン</a> <a href="/addressworks-site/help/faq/">FAQ</a></div> <h1>詳細設定</h1>
+<h2>検証の対象</h2>
+<h3>請求先住所もチェックする（初期値: オフ）</h3>
+<p>配送先と別の請求先住所が入力された場合に、配送先と同じ設定で請求先も検証します。エラーは請求先の欄に表示されます。請求先が海外（日本以外）の場合は検証しません。</p>
+<h3>日本語を含まない住所は検証をスキップする（初期値: オン）</h3>
+<p>住所の全欄（氏名・市区町村・住所・建物名）が英数字と記号だけの場合、海外購入者とみなし、郵便番号照合を含む検証をすべてスキップします。オフにすると、日本語以外の入力は「英語（ローマ字）入力」としてエラーになります。</p>
+<h3>配送不要の商品だけのカートは検証をスキップする（初期値: オン）</h3>
+<p>デジタル商品やサービスなど、配送が不要な商品だけの注文では住所を検証しません。配送が必要な商品が 1 つでもあれば検証します。</p>
+<h2>検証しないケース（固定）</h2>
+<p>以下は設定にかかわらず検証しません。</p>
+<ul>
+<li>配送先の国が日本以外</li>
+<li>カートの段階（住所入力前）</li>
+<li>本アプリを一時停止中、または月間の検証件数が上限に達した後（<a href="/addressworks-site/help/plans/">プラン</a>）</li>
+</ul>
+<h2>設定のエクスポート／インポート</h2>
+<p>「エクスポート」で現在の設定を JSON として書き出せます。別のストアで「インポートする JSON を貼り付け」に貼って保存すると、同じ設定になります。JSON に不明な項目があっても無視され、足りない項目は初期値になります。</p>
+<h2>一時停止と再開</h2>
+<p>ホームの「住所チェックを無効にする」で、設定を保持したまま検証を止められます。「有効にする」で再開します。アンインストールせずに様子を見たいときにお使いください。</p>
+</div>
+    </main>
+    <footer>
+      <div class="wrap">
+        アドレスワークス（住所チェック＆整形）｜ お問い合わせ:
+        <a href="mailto:m.0917youki@gmail.com">m.0917youki@gmail.com</a> ｜
+        <a href="/addressworks-site/privacy/">プライバシーポリシー</a> ｜
+        <a href="/addressworks-site/terms/">利用規約</a> <br />最終更新: 2026-10-30
+      </div>
+    </footer>
+  </body>
+</html>

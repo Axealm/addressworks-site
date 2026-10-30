@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>プライバシーポリシー | 住所チェック＆整形</title>
+    <meta name="description" content="Shopify アプリ「住所チェック＆整形」が取り扱う情報、保存先、保存期間、削除の方法について。" />
+    <style>
+      :root {
+        --fg: #1a1a1a;
+        --muted: #5c5f62;
+        --bg: #ffffff;
+        --line: #e3e3e3;
+        --accent: #0a6b4f;
+        --soft: #f4f6f8;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans",
+          "Hiragino Kaku Gothic ProN", "Noto Sans JP", Meiryo, sans-serif;
+        color: var(--fg);
+        background: var(--bg);
+        line-height: 1.75;
+      }
+      header {
+        border-bottom: 1px solid var(--line);
+        background: var(--soft);
+      }
+      .wrap {
+        max-width: 880px;
+        margin: 0 auto;
+        padding: 0 16px;
+      }
+      header .wrap {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 8px 20px;
+        padding: 14px 16px;
+      }
+      header a.brand {
+        font-weight: 700;
+        color: var(--fg);
+        text-decoration: none;
+        font-size: 17px;
+      }
+      header nav a {
+        color: var(--muted);
+        text-decoration: none;
+        margin-right: 14px;
+        font-size: 14px;
+      }
+      header nav a:hover,
+      main a:hover {
+        text-decoration: underline;
+      }
+      main {
+        padding: 28px 0 56px;
+      }
+      main a {
+        color: var(--accent);
+      }
+      h1 {
+        font-size: 26px;
+        margin: 0 0 16px;
+        line-height: 1.35;
+      }
+      h2 {
+        font-size: 20px;
+        margin: 36px 0 10px;
+        padding-top: 8px;
+        border-top: 1px solid var(--line);
+      }
+      h3 {
+        font-size: 16px;
+        margin: 24px 0 6px;
+      }
+      p,
+      li {
+        font-size: 15.5px;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        margin: 12px 0 20px;
+        font-size: 14px;
+        display: block;
+        overflow-x: auto;
+      }
+      th,
+      td {
+        border: 1px solid var(--line);
+        padding: 6px 10px;
+        text-align: left;
+        vertical-align: top;
+      }
+      th {
+        background: var(--soft);
+        white-space: nowrap;
+      }
+      code {
+        background: var(--soft);
+        padding: 1px 5px;
+        border-radius: 3px;
+        font-size: 90%;
+      }
+      pre {
+        background: var(--soft);
+        padding: 12px;
+        overflow-x: auto;
+        border-radius: 6px;
+      }
+      blockquote {
+        margin: 12px 0;
+        padding: 8px 14px;
+        border-left: 4px solid var(--accent);
+        background: var(--soft);
+      }
+      .subnav {
+        background: var(--soft);
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        padding: 10px 14px;
+        margin: 0 0 20px;
+        font-size: 14px;
+      }
+      .subnav a {
+        margin-right: 12px;
+        white-space: nowrap;
+      }
+      .updated {
+        color: var(--muted);
+        font-size: 13px;
+      }
+      footer {
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 13px;
+        padding: 18px 0 32px;
+      }
+      footer a {
+        color: var(--muted);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="wrap">
+        <a class="brand" href="/addressworks-site/">住所チェック＆整形</a>
+        <nav>
+          <a href="/addressworks-site/help/">ヘルプ</a>
+          <a href="/addressworks-site/help/faq/">FAQ</a>
+          <a href="/addressworks-site/changelog/">更新履歴</a>
+          <a href="/addressworks-site/privacy/">プライバシーポリシー</a>
+          <a href="/addressworks-site/terms/">利用規約</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="wrap"> <h1>プライバシーポリシー</h1>
+<p>アドレスワークス（以下「当方」）は、Shopify アプリ「住所チェック＆整形」（以下「本アプリ」）の提供にあたり、以下のとおり情報を取り扱います。</p>
+<h2>1. 購入者（店舗のお客様）の情報について</h2>
+<p>本アプリのチェックアウト検証は、Shopify のプラットフォーム内（Shopify Functions）で実行されます。購入者が入力した氏名・住所・電話番号・メールアドレスは、<strong>当方のサーバーに送信・保存されません。</strong> 検証の結果（エラー文）だけが Shopify のチェックアウト画面に表示されます。</p>
+<p>注文件数の集計のため、Shopify から注文作成の通知（Webhook）を受け取りますが、受け取る項目は<strong>注文 ID と作成日時のみ</strong>です。購入者の個人情報は含まれません。</p>
+<h2>2. 店舗（加盟店）から取得する情報</h2>
+<table>
+<thead>
+<tr>
+<th>情報</th>
+<th>目的</th>
+<th>保存先</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ストアのドメイン（例: example.myshopify.com）、アクセストークン</td>
+<td>アプリの動作、設定の保存、Shopify API の呼び出し</td>
+<td>当方のデータベース（Cloudflare D1）</td>
+</tr>
+<tr>
+<td>本アプリの設定内容と変更履歴</td>
+<td>検証ルールの適用、設定画面の表示</td>
+<td>店舗のメタフィールド（Shopify）と当方のデータベース</td>
+</tr>
+<tr>
+<td>月間の検証件数、プラン、課金状態</td>
+<td>上限の管理、請求</td>
+<td>当方のデータベース</td>
+</tr>
+<tr>
+<td>店舗の連絡先メールアドレス（Shopify に登録のもの）</td>
+<td>上限到達などの通知メール</td>
+<td>当方のデータベース（アンインストール時に削除）</td>
+</tr>
+<tr>
+<td>管理画面へのアクセス記録（送信元 IP のハッシュ値、日時、種別）</td>
+<td>不正アクセスの検知</td>
+<td>当方のデータベース（90 日で削除）</td>
+</tr>
+</tbody></table>
+<h2>3. 利用する外部サービス</h2>
+<ul>
+<li><strong>Shopify</strong>（アプリの実行基盤、課金）</li>
+<li><strong>Cloudflare</strong>（管理画面サーバーとデータベースのホスティング。データは Cloudflare のネットワーク上に保存されます）</li>
+<li><strong>Brevo</strong>（店舗向け通知メールの送信）</li>
+<li><strong>GitHub</strong>（本サイトのホスティング。本サイトはアクセス解析や Cookie を使いません）</li>
+</ul>
+<p>当方は、上記以外の第三者に情報を販売・提供しません。</p>
+<h2>4. 保存期間と削除</h2>
+<ul>
+<li>アプリをアンインストールすると、アクセストークンは直ちに無効化し、店舗データは Shopify からの削除要求（shop/redact Webhook）を受けて削除します。</li>
+<li>購入者データは保持していないため、購入者からの開示・削除要求（customers/data_request、customers/redact）に対しては「該当データなし」として応答します。</li>
+<li>アクセス記録・処理失敗の記録は 90 日で自動削除します。</li>
+<li>データベースのバックアップは暗号化して 90 日間保持します。</li>
+</ul>
+<h2>5. 安全管理</h2>
+<p>通信はすべて TLS で暗号化します。Shopify からの Webhook は署名を検証します。秘密情報（API キー等）はコードに含めず、実行環境の秘密変数に保存します。</p>
+<h2>6. お問い合わせ</h2>
+<p>本ポリシーに関するお問い合わせは <a href="mailto:m.0917youki@gmail.com">m.0917youki@gmail.com</a> までご連絡ください。</p>
+<h2>7. 改定</h2>
+<p>本ポリシーを改定する場合は、本ページで公開します。重要な変更は管理画面でもお知らせします。</p>
+</div>
+    </main>
+    <footer>
+      <div class="wrap">
+        アドレスワークス（住所チェック＆整形）｜ お問い合わせ:
+        <a href="mailto:m.0917youki@gmail.com">m.0917youki@gmail.com</a> ｜
+        <a href="/addressworks-site/privacy/">プライバシーポリシー</a> ｜
+        <a href="/addressworks-site/terms/">利用規約</a> <br />最終更新: 2026-10-30
+      </div>
+    </footer>
+  </body>
+</html>
