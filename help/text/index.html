@@ -165,12 +165,13 @@
 <p>管理画面「文字・文字数」の各項目です。対象は配送先の 姓・名・会社名・市区町村・住所・建物名（部屋番号）です。</p>
 <h2>送り状ソフトのプリセット</h2>
 <p>お使いの送り状ソフトを選ぶと、欄ごとの文字数上限が一括で入ります。選んだ後に個別の欄を変えることもできます（その場合は「カスタム」になります）。</p>
-<table><thead><tr><th>プリセット</th><th>姓</th><th>名</th><th>会社名</th><th>市区町村</th><th>住所</th><th>建物名・部屋番号</th><th>全角数字を 2 文字</th><th>出典・備考</th></tr></thead><tbody><tr><td>ヤマト運輸 B2クラウド</td><td>8</td><td>8</td><td>25</td><td>12</td><td>16</td><td>16</td><td>いいえ</td><td><a href="https://support.shipandco.com/hc/en-us/articles/360015531294" rel="noopener" target="_blank" rel="noopener" target="_blank">出典</a>（暫定）<br><small>住所各行 全角16／半角32（Ship&amp;co サポート記事 2026-10-30 確認）。市区郡町村12はコミュニティ報告、氏名8・会社名25は暫定。</small></td></tr><tr><td>佐川急便 e飛伝Ⅲ</td><td>8</td><td>8</td><td>20</td><td>25</td><td>25</td><td>25</td><td>いいえ</td><td><a href="https://support.shipandco.com/hc/en-us/articles/360015531294" rel="noopener" target="_blank" rel="noopener" target="_blank">出典</a>（暫定）<br><small>住所各行 25 文字（全角半角問わず、Ship&amp;co サポート記事 2026-10-30 確認）。氏名・会社名は暫定。</small></td></tr><tr><td>日本郵便 ゆうプリR</td><td>10</td><td>10</td><td>20</td><td>25</td><td>25</td><td>25</td><td>いいえ</td><td><a href="https://support.shipandco.com/hc/en-us/articles/360015531294" rel="noopener" target="_blank" rel="noopener" target="_blank">出典</a>（暫定）<br><small>住所各行 25 文字（Ship&amp;co サポート記事 2026-10-30 確認。日本郵便の公式資料では住所計 150 バイトを自動分割）。氏名・会社名は暫定。</small></td></tr><tr><td>Ship&amp;co</td><td>8</td><td>8</td><td>25</td><td>16</td><td>16</td><td>16</td><td>いいえ</td><td><a href="https://www.shipandco.com/" rel="noopener" target="_blank" rel="noopener" target="_blank">出典</a>（暫定）<br><small>Ship&amp;co は運送会社ごとに上限が異なるため、最も厳しいヤマト（各行 全角16）に合わせる。</small></td></tr></tbody></table>
+<table><thead><tr><th>プリセット</th><th>姓</th><th>名</th><th>会社名</th><th>市区町村</th><th>住所</th><th>建物名・部屋番号</th><th>全角数字を 2 文字</th><th>出典・備考</th></tr></thead><tbody><tr><td>ヤマト運輸 B2クラウド</td><td>8</td><td>7</td><td>25</td><td>12</td><td>16</td><td>16</td><td>いいえ</td><td><a href="https://bmypage.kuronekoyamato.co.jp/bmypage/pdf/new_exchange1.pdf" rel="noopener" target="_blank" rel="noopener" target="_blank">出典</a><br><small>B2クラウド 送り状発行データレイアウト（ヤマト公式、2026-11-03 確認）: お届け先名 全角16（姓 8＋空白＋名 7）、会社・部門名 全角25、住所は都道府県4＋市区郡町村12＋町・番地16、アパートマンション名 全角16。半角は 2 倍。</small></td></tr><tr><td>佐川急便 e飛伝Ⅲ</td><td>8</td><td>7</td><td>16</td><td>12</td><td>16</td><td>16</td><td>いいえ</td><td><a href="https://manual.sokuhan.jp/downloads/ehiden3.pdf" rel="noopener" target="_blank" rel="noopener" target="_blank">出典</a>（暫定）<br><small>e飛伝Ⅲ CSV レイアウト（速販 2022-06-09、Welcart の 2 資料で一致、2026-11-03 確認）: 名称1・2、住所1〜3 とも全角16（半角は取込時に全角へ変換）。住所1 は都道府県＋市区町村のため市区町村は 12。Ship&amp;co の記事は 25 と記載。佐川公式マニュアルは要ログインのため暫定。</small></td></tr><tr><td>日本郵便 ゆうプリR</td><td>12</td><td>12</td><td>25</td><td>21</td><td>25</td><td>25</td><td>いいえ</td><td><a href="https://www.post.japanpost.jp/yu-packprint-r/member/download/instructions/%EF%BC%96%EF%BC%8E%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF%E8%A8%AD%E5%AE%9A%E8%AA%AC%E6%98%8E%E6%9B%B8.pdf" rel="noopener" target="_blank" rel="noopener" target="_blank">出典</a><br><small>ゆうプリR フィルタ設定説明書（日本郵便公式 2026-05-27 版、2026-11-03 確認）: 住所1〜3 各 全角25／半角50（Shift-JIS 50 バイト、合計150バイトを自動分割）。住所1 は都道府県＋市区町村のため市区町村は 21。名称1・2 は連携ツールのレイアウト資料で 50 バイト（全角25）。</small></td></tr><tr><td>Ship&amp;co</td><td>8</td><td>7</td><td>25</td><td>12</td><td>16</td><td>16</td><td>いいえ</td><td><a href="https://support.shipandco.com/hc/en-us/articles/360015531294" rel="noopener" target="_blank" rel="noopener" target="_blank">出典</a><br><small>Ship&amp;co サポート記事（2026-11-03 確認）: ヤマト 各行 全角16／半角32、佐川・日本郵便 各行 25。運送会社を選ばず使えるよう最も厳しいヤマト B2クラウドの値に合わせる。</small></td></tr></tbody></table>
 
 <ul>
 <li>文字数は<strong>全角換算</strong>です。半角文字は 0.5 文字として数えます（例: 「1-2-3」は 2.5 → 切り上げて 3 文字）。</li>
 <li>「全角数字を 2 文字として数える」をオンにすると、全角数字 1 文字を全角 2 文字分として数えます。一部の送り状ソフトで全角数字が半角 2 文字分として扱われる場合に合わせる設定です。</li>
-<li>上限は 1〜200、空欄は制限なしです。「暫定」の付いた値は各社の公開仕様で確定できていないため、実際の送り状ソフトの仕様を優先してください（確認でき次第、更新履歴でお知らせします）。</li>
+<li>上限は 1〜200、空欄は制限なしです。各値は「出典」の資料で確認しています。「暫定」の付いた値（佐川 e飛伝Ⅲ）は公式マニュアルで確認できていないため、実際の送り状ソフトの仕様を優先してください（確認でき次第、更新履歴でお知らせします）。</li>
+<li>姓と名は送り状の「お届け先名」に「姓 名」（空白込み）でまとめて印字されるため、姓と名の上限の合計は各社の氏名欄より 1 文字少なくしています。市区町村の上限は、都道府県（最大 4 文字）と同じ欄に入るソフトではその分を差し引いています。</li>
 </ul>
 <table>
 <thead>
@@ -286,7 +287,7 @@
         アドレスワークス（住所チェック＆整形）｜ お問い合わせ:
         <a href="mailto:m.0917youki@gmail.com">m.0917youki@gmail.com</a> ｜
         <a href="/addressworks-site/privacy/">プライバシーポリシー</a> ｜
-        <a href="/addressworks-site/terms/">利用規約</a> <br />最終更新: 2026-10-30
+        <a href="/addressworks-site/terms/">利用規約</a> <br />最終更新: 2026-11-03
       </div>
     </footer>
   </body>
